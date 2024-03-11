@@ -2,9 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone repository') {
+        stage('checkout repository') {
             steps {
-                checkout scm
+                //checkout
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/muqaduszulfiqar/Mlops_Activity2.git']])
             }
         }
 //deploy
