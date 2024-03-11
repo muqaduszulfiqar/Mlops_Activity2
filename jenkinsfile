@@ -7,7 +7,7 @@ pipeline {
                 checkout scm
             }
         }
-
+//deploy
         stage('Install dependencies') {
             steps {
                 sh 'pip install --upgrade pip'
